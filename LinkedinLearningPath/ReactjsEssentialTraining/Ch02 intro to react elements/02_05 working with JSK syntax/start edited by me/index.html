@@ -17,11 +17,17 @@
     <div id="root"></div>
 
     <script type="text/babel">
+      let cow="🐄"
+      let cat = "😺"
+      let car ="🚗"
+      let myName = "Jose A. Diaz"
       ReactDOM.render(
         <ul>
-          <li>🤖</li>
-          <li>🤠</li>
-          <li>🌝</li>
+          <li>{cow}</li>
+          <li>{cat}</li>
+          <li>{car}</li>
+          <li>{myName.toUpperCase()}</li>
+          <li>My name string lenght is: {myName.length}</li>
         </ul>,
         document.getElementById("root")
       );

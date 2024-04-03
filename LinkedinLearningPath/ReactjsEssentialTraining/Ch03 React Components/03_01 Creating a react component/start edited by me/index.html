@@ -17,18 +17,25 @@
     <div id="root"></div>
 
     <script type="text/babel">
-      let robot = "🤖";
-      let cowboy = "🤠";
-      let moon = "🌝";
-      let name = "React";
+      function Header (){
+        return(<h1>Welcome to the Jose's Kitchen</h1>);
+
+      }
+
+      const Description =() => {
+        return(
+          <section>Here we serve the most amazing food</section>
+          );
+      }
+
+      function App(){
+       return( <div>
+        <Header />
+        <Description />
+          </div>);
+      }
       ReactDOM.render(
-        <ul>
-          <li>{robot}</li>
-          <li>{cowboy}</li>
-          <li>{moon}</li>
-          <li>{name.toUpperCase()}</li>
-          <li>{name.length}</li>
-        </ul>,
+        <App />,
         document.getElementById("root")
       );
     </script>

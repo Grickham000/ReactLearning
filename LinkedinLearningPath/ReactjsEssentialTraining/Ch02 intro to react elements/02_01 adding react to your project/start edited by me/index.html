@@ -14,17 +14,25 @@
   </head>
   <body>
     <div id="root"></div>
-
+    <div id="prueba"></div>
     <script type="text/javascript">
-      let heading = React.createElement(
-        "h1",
-        null,
-        "Getting Started with React"
-      );
-
       ReactDOM.render(
-        heading,
+        React.createElement(
+          "h1",
+          null,
+          "Getting started with react"
+        ),
         document.getElementById("root")
+      );
+    </script>
+    <script type="text/javascript">
+      ReactDOM.render(
+        React.createElement(
+          "p",
+          null,
+          "Thi is a text rendered with react"
+        ),
+        document.getElementById("prueba")
       );
     </script>
   </body>
