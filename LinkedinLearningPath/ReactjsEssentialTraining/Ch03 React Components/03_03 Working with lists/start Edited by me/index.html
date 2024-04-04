@@ -17,28 +17,48 @@
     <div id="root"></div>
 
     <script type="text/babel">
-      function Header() {
+      const dishes = [
+        "Chiles en hogada",
+        "Huevos estrellados con tortilla guisada",
+        "Rib-eye"
+      ];
+      function Header(props) {
         return (
           <header>
-            <h1>Eve's Kitchen</h1>
+            <h1>{props.name}'s Kitchen</h1>
           </header>
         );
       }
-      function Main() {
+      function Main(props) {
+        console.log(props.dishes)
         return (
+          
           <section>
-            <p>
-              We serve the most delicious food
-              around
-            </p>
+            <ul>
+              {props.dishes.map((dish,i)=>(
+                <li key={i}>{dish}</li>
+        ))}
+              </ul>
           </section>
         );
       }
+
+      function Footer(props) {
+        return (
+          <footer>
+            <p>Copyright {props.year}</p>
+          </footer>
+        );
+      }
+
       function App() {
         return (
           <div>
-            <Header />
-            <Main />
+            <Header name="Cindy" />
+            <Main dishes={dishes} />
+            <Footer
+              year={new Date().getFullYear()}
+            />
           </div>
         );
       }
